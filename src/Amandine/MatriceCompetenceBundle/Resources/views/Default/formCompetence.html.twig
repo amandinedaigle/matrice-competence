@@ -1,0 +1,6 @@
+<h1>test formulaire</h1>
+<form action="{{ path('amandine_matrice_competence_add') }}" method="post">
+	{{ form_label(form.intitule, 'Intitulé'|trans) }}
+	{{ form_widget(form.intitule) }}
+	<button type="submit">Créer une compétence</button>
+</form>

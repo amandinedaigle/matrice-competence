@@ -1,0 +1,7 @@
+parameters:
+#    amandine_matrice_competence.example.class: Amandine\MatriceCompetenceBundle\Example
+
+services:
+#    amandine_matrice_competence.example:
+#        class: %amandine_matrice_competence.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,3 @@
+{% block content_header_more %}
+    <li>Bonjour {{ app.user ? app.user.username : 'Anonymous' }} - <a href="{{ path('_demo_logout') }}">Se déconnecter</a></li>
+{% endblock %}

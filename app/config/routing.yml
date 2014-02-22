@@ -1,0 +1,12 @@
+amandine_matrice_competence:
+    resource: "@AmandineMatriceCompetenceBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+# Cette route sera gérée automatiquement par symfony, il faut juste la déclarer
+_security_login_check:
+    pattern: /login_check
+     
+# Cette route sera gérée automatiquement par symfony, il faut juste la déclarer
+_security_logout:
+    pattern: /logout
+
