@@ -8,28 +8,30 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="competence")
  */
-class Competence {
-	/**
+class Competence
+{
+    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-	protected $id_competence;
-	
-	/**
+    protected $id_competence;
+
+    /**
      * @ORM\Column(type="string")
      */
-	protected $intitule;
+    protected $intitule;
 
     /**
      * Get id_competence
      *
-     * @return integer 
+     * @return integer
      */
     public function getIdCompetence()
     {
         return $this->id_competence;
     }
+
 
     /**
      * Set intitule
@@ -37,17 +39,18 @@ class Competence {
      * @param \varchar $intitule
      * @return Competence
      */
+
     public function setIntitule($intitule)
     {
         $this->intitule = $intitule;
-
         return $this;
     }
+
 
     /**
      * Get intitule
      *
-     * @return \varchar 
+     * @return \varchar
      */
     public function getIntitule()
     {

@@ -1,17 +1,15 @@
 
-
-
 <table>
 	<tr>
 		<td>Identifiant</td>
-		<td>Categorie des compétences</td>
+		<!--<td>Categorie des compétences</td>-->
 		<td>Compétence</td>
 	</tr>
-	{% for competence in liste_competence %}
+	{% for competence in listeCompetences %}
 		<tr>
-			<td>{{ competence.identifiant }}</td>
-			<td>{{ competence.cat_competence }}</td>
-			<td>{{ competence.competence }}</td>
+			<td></td>
+			<!--<td></td>-->
+			<td>{{ competence.intitule }}</td>
 		</tr>
 	{% endfor %}
 </table>

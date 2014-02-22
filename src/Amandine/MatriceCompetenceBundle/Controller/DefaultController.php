@@ -15,7 +15,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Amandine\MatriceCompetenceBundle\Entity\Competence;
 use Amandine\MatriceCompetenceBundle\Form\Type\ComptenceType;
 /**
-     * @Route("/inde", name="_listecompetence")
+     * @Route("/", name="_listecompetence")
      * @Template()
      */
 class DefaultController extends Controller
@@ -27,23 +27,21 @@ class DefaultController extends Controller
     public function indexAction()
     {
     	/* recuperation de la liste de l'ensemble des competences de tout le monde */
-    	$listeCompetence = $this->getDoctrine()
+    	$listeCompetences = $this->getDoctrine()
         ->getRepository('AmandineMatriceCompetenceBundle:Competence')
         ->findAll();
 
-	    if (!$listeCompetence) {
-	        throw $this->createNotFoundException(
-	            'Aucune competence listé pour l\'instant'
-	        );
-	    }else{
-	    	print_r($listeCompetence);
+	    if (!$listeCompetences) {
+	        throw $this->createNotFoundException('Aucune competence listé pour l\'instant');
+	    } else { 
+	    	//print_r($listeCompetences);
 	    }
     	
     	/*$listeCompetence[0]['identifiant'] = 'Toto';
 		$listeCompetence[0]['cat_competence'] = 'Ressources Humaines';
 		$listeCompetence[0]['competence'] = 'Ecoute';*/
     	
-        return $this->render('AmandineMatriceCompetenceBundle:Default:index.html.twig', array('liste_competence' => $listeCompetence));
+        return $this->render('AmandineMatriceCompetenceBundle:Default:index.html.twig', array('listeCompetences' => $listeCompetences));
     }
 	
 	/**
